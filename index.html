@@ -240,7 +240,7 @@
                 <div class="pill-row">
                     <div class="pill">No analytics</div>
                     <div class="pill">No ads</div>
-                    <div class="pill">No server-side data collection</div>
+                    <div class="pill">No ArrStack backend</div>
                 </div>
             </div>
         </section>
@@ -253,37 +253,34 @@
 
             <article class="card">
                 <h2>What ArrStack Does Not Collect</h2>
-                <p>ArrStack does not collect, receive, or sell personal data through ArrStack-operated servers.</p>
+                <p>ArrStack has no backend that collects your data. The app stores data locally to function, but none of it is sent to ArrStack.</p>
                 <ul>
-                    <li>No analytics or behavioral tracking</li>
-                    <li>No advertising identifiers</li>
-                    <li>No crash-reporting or telemetry SDKs operated by ArrStack</li>
-                    <li>No media library contents sent to ArrStack</li>
-                    <li>No server connection details uploaded to ArrStack</li>
+                    <li>No analytics, behavioral tracking, or advertising identifiers</li>
+                    <li>No crash-reporting or telemetry operated by ArrStack</li>
+                    <li>No media library contents or server connection details sent to ArrStack</li>
                 </ul>
             </article>
 
             <article class="card">
-                <h2>What the App Stores to Work</h2>
-                <p>ArrStack stores information locally so it can reconnect to the services you configure.</p>
+                <h2>What the App Stores Locally</h2>
+                <p>ArrStack stores information on your device so it can connect to the services you configure.</p>
                 <ul>
-                    <li>Server names, URLs, ports, and optional base paths</li>
-                    <li>API keys, usernames, passwords, custom headers, and similar connection credentials</li>
-                    <li>Session data such as authentication cookies when needed for compatible services</li>
+                    <li>Server names, URLs, ports, API keys, and connection credentials</li>
+                    <li>Session data such as authentication cookies</li>
                     <li>App settings, preferences, and feature state</li>
                 </ul>
+                <p>Exported backup files may also contain this data and are under your control.</p>
             </article>
 
             <article class="card">
                 <h2>Network Requests</h2>
                 <p>
-                    The app connects directly from your device to the servers and services you configure, such as
-                    Sonarr, Radarr, Overseerr, SABnzbd, NZBGet, qBittorrent, Bazarr, Tautulli, and Uptime Kuma.
-                    ArrStack does not proxy these requests through ArrStack servers.
+                    Requests go directly from your device to the servers you configure (Sonarr, Radarr, Bazarr,
+                    Tautulli, qBittorrent, SABnzbd, NZBGet, Overseerr, Uptime Kuma, etc.).
+                    ArrStack does not proxy requests through its own servers.
                 </p>
                 <p>
-                    If you contact support by email, your email provider handles that message. If you make a purchase,
-                    Apple or Google handles billing on its platform.
+                    Purchases are handled by Apple or Google on their respective platforms.
                 </p>
             </article>
 
@@ -291,70 +288,34 @@
                 <article class="card platform">
                     <h2>Android</h2>
                     <p>
-                        On Android, ArrStack stores your configuration locally on your device. Sensitive values are
-                        protected locally on-device.
-                    </p>
-                    <p>
-                        ArrStack excludes its main configuration store and session-cookie store from Android cloud
-                        backup and device-transfer backup rules.
-                    </p>
-                    <p>
-                        If you manually export a backup file from inside the app, that exported file is under your
-                        control and may contain your service configuration data.
+                        Configuration is stored locally on-device. The main configuration and session stores are excluded from Android cloud backup and device-transfer rules. ArrStack does not provide cloud backup.
                     </p>
                 </article>
 
                 <article class="card platform">
                     <h2>iOS</h2>
                     <p>
-                        On iOS, ArrStack stores your configuration on your device. If you enable iCloud sync, your
-                        configuration may sync through your personal iCloud account using Apple services such as
-                        CloudKit.
-                    </p>
-                    <p>
-                        Apple handles that synced data under Apple's own terms and privacy practices. If iCloud sync is
-                        disabled, your configuration remains local to your device unless you export it yourself.
+                        Configuration is stored locally on-device and may be included in iCloud backups if enabled on your device.
                     </p>
                 </article>
             </div>
 
             <article class="card">
-                <h2>Purchases</h2>
-                <p>
-                    Purchases and subscriptions are handled by Apple on iOS and by Google on Android. ArrStack does
-                    not receive your full payment card details or full payment credentials.
-                </p>
-            </article>
-
-            <article class="card">
                 <h2>Retention and Deletion</h2>
-                <p>
-                    ArrStack does not keep a server-side copy of your app data. Your data stays on your device, in
-                    your own Apple iCloud account if you enable iCloud sync on iOS, or in any manual backup files you
-                    create.
-                </p>
-                <p>You can reduce or remove stored data by:</p>
-                <ul>
-                    <li>Deleting servers or clearing app data on your device</li>
-                    <li>Uninstalling the app</li>
-                    <li>Deleting any manual backup files you exported</li>
-                    <li>Turning off iCloud sync on iOS and removing synced data using your Apple account tools</li>
-                </ul>
+                <p>Your data stays on your device. To remove it: delete servers or clear app data, uninstall the app, and delete any exported backup files.</p>
             </article>
 
             <article class="card">
                 <h2>Third-Party Services</h2>
                 <p>
-                    ArrStack connects to services that you operate or choose to use. Their privacy, security, and data
-                    handling practices are controlled by those services and their operators, not by ArrStack.
+                    The services you connect to are controlled by their operators, not ArrStack. Their privacy and data handling practices are their own.
                 </p>
             </article>
 
             <article class="card">
                 <h2>Changes to This Policy</h2>
                 <p>
-                    This privacy policy may be updated from time to time. The latest version is indicated by the
-                    "Last Updated" date at the top of this page.
+                    This policy may be updated. The latest version is indicated by the "Last Updated" date above.
                 </p>
             </article>
 
