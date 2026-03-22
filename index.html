@@ -3,60 +3,173 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ArrStack - Support</title>
+    <title>ArrStack Privacy Policy</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+        :root {
+            --bg: #08111d;
+            --bg-accent: #10243c;
+            --surface: rgba(11, 23, 39, 0.82);
+            --surface-strong: rgba(16, 36, 60, 0.96);
+            --text: #edf3ff;
+            --muted: #9cb0ca;
+            --line: rgba(171, 196, 255, 0.14);
+            --brand: #89c3ff;
+            --brand-strong: #c7e3ff;
+            --shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+            --radius: 24px;
         }
 
-        .container {
-            max-width: 480px;
-            text-align: center;
-            width: 100%;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Avenir Next", "SF Pro Display", "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(94, 158, 255, 0.18), transparent 34%),
+                radial-gradient(circle at top right, rgba(104, 212, 180, 0.12), transparent 28%),
+                linear-gradient(180deg, var(--bg-accent), var(--bg));
+            color: var(--text);
+            min-height: 100vh;
+            padding: 32px 18px 56px;
+        }
+
+        .shell {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background: linear-gradient(180deg, rgba(17, 36, 60, 0.95), rgba(9, 20, 34, 0.95));
+            border: 1px solid var(--line);
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto -12% -38% auto;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(137, 195, 255, 0.28), transparent 68%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            padding: 34px 28px 28px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(137, 195, 255, 0.08);
+            color: var(--brand-strong);
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
         h1 {
-            font-size: 2.4rem;
-            color: #fff;
-            margin-bottom: 8px;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 0.98;
+            margin-top: 18px;
+            letter-spacing: -0.04em;
         }
 
-        .tagline {
-            font-size: 1.1rem;
-            color: #888;
-            margin-bottom: 40px;
+        .lede {
+            max-width: 680px;
+            font-size: 1.05rem;
+            line-height: 1.72;
+            color: var(--muted);
+            margin-top: 16px;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .pill {
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 10px 14px;
+            font-size: 0.93rem;
+            color: var(--brand-strong);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 18px;
+            margin-top: 22px;
         }
 
         .card {
-            background: #1a1a1a;
-            border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 24px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            backdrop-filter: blur(14px);
         }
 
         .card h2 {
-            font-size: 1.2rem;
-            color: #fff;
+            font-size: 1.22rem;
             margin-bottom: 12px;
+            letter-spacing: -0.02em;
         }
 
-        .card p {
-            font-size: 0.95rem;
-            color: #999;
-            line-height: 1.6;
+        .card p,
+        .card li {
+            color: var(--muted);
+            font-size: 0.98rem;
+            line-height: 1.76;
+        }
+
+        .card p + p,
+        .card p + ul,
+        .card ul + p,
+        .card ul + ul {
+            margin-top: 14px;
+        }
+
+        .card ul {
+            padding-left: 18px;
+        }
+
+        .card li + li {
+            margin-top: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .platform {
+            background: var(--surface-strong);
         }
 
         a {
-            color: #5e9eff;
+            color: var(--brand);
             text-decoration: none;
         }
 
@@ -65,84 +178,176 @@
         }
 
         .footer {
-            font-size: 0.8rem;
-            color: #555;
-            margin-top: 20px;
+            text-align: center;
+            color: #7287a5;
+            font-size: 0.86rem;
+            margin-top: 18px;
+        }
+
+        @media (max-width: 720px) {
+            body {
+                padding: 18px 14px 40px;
+            }
+
+            .hero-inner,
+            .card {
+                padding: 22px 18px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lede,
+            .card p,
+            .card li {
+                font-size: 0.96rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>ArrStack</h1>
-        <p class="tagline">Your media server stack in one app.</p>
+    <main class="shell">
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="eyebrow">ArrStack Privacy Policy</div>
+                <h1>Privacy for ArrStack on iOS and Android</h1>
+                <p class="lede">
+                    ArrStack is a client app for connecting to the media and download services you choose to run.
+                    ArrStack does not operate a backend that receives your server activity, media library data, or
+                    connection details.
+                </p>
+                <div class="pill-row">
+                    <div class="pill">No analytics</div>
+                    <div class="pill">No ads</div>
+                    <div class="pill">No ArrStack server-side data collection</div>
+                </div>
+            </div>
+        </section>
 
-        <div class="card">
-            <h2>Support</h2>
-            <p>Need help or have feedback? Reach out anytime.</p>
-            <p style="margin-top: 16px;">
-                <a href="mailto:support@arrstack.org">support@arrstack.org</a>
-            </p>
-        </div>
+        <section class="layout">
+            <article class="card">
+                <h2>Last Updated</h2>
+                <p>March 22, 2026</p>
+            </article>
 
-        <div class="card">
-            <h2>About</h2>
-            <p>
-                ArrStack is a native app for iOS and Android for managing Sonarr, Radarr,
-                SABnzbd, NZBGet, qBittorrent, Bazarr, Tautulli, and more — all from one app.
-            </p>
-        </div>
+            <article class="card">
+                <h2>What ArrStack Does Not Collect</h2>
+                <p>ArrStack does not collect, receive, or sell personal data through ArrStack-operated servers.</p>
+                <ul>
+                    <li>No analytics or behavioral tracking</li>
+                    <li>No advertising identifiers</li>
+                    <li>No crash-reporting or telemetry SDKs operated by ArrStack</li>
+                    <li>No media library contents sent to ArrStack</li>
+                    <li>No server connection details uploaded to ArrStack</li>
+                </ul>
+            </article>
 
-        <div class="card" id="privacy" style="text-align: left;">
-            <h2 style="text-align: center;">Privacy Policy</h2>
-            <p><strong>Last Updated:</strong> March 2026</p>
+            <article class="card">
+                <h2>What the App Stores to Work</h2>
+                <p>ArrStack stores information locally so it can reconnect to the services you configure.</p>
+                <ul>
+                    <li>Server names, URLs, ports, and optional base paths</li>
+                    <li>API keys, usernames, passwords, custom headers, and similar connection credentials</li>
+                    <li>Session data such as authentication cookies when needed for compatible services</li>
+                    <li>App settings, preferences, and feature state</li>
+                </ul>
+            </article>
 
-            <p style="margin-top: 12px;">
-                ArrStack does not collect, store, or transmit personal data to ArrStack
-                servers. Your server connection details (such as URLs and API keys) are
-                stored on your device.
-            </p>
+            <article class="card">
+                <h2>Network Requests</h2>
+                <p>
+                    The app connects directly from your device to the servers and services you configure, such as
+                    Sonarr, Radarr, Overseerr, SABnzbd, NZBGet, qBittorrent, Bazarr, Tautulli, and Uptime Kuma.
+                    ArrStack does not proxy these requests through ArrStack servers.
+                </p>
+                <p>
+                    If you contact support by email, your email provider handles that message. If you make a purchase,
+                    Apple or Google handles billing on its platform.
+                </p>
+            </article>
 
-            <p style="margin-top: 12px;">
-                <strong>Data Collection:</strong> None. ArrStack does not use analytics,
-                advertising, or tracking frameworks.
-            </p>
+            <div class="grid">
+                <article class="card platform">
+                    <h2>Android</h2>
+                    <p>
+                        On Android, ArrStack stores your configuration locally on your device. Sensitive values are
+                        protected locally on-device.
+                    </p>
+                    <p>
+                        ArrStack excludes its main configuration store and session-cookie store from Android cloud
+                        backup and device-transfer backup rules.
+                    </p>
+                    <p>
+                        If you manually export a backup file from inside the app, that exported file is under your
+                        control and may contain your service configuration data.
+                    </p>
+                </article>
 
-            <p style="margin-top: 12px;">
-                <strong>Network Requests:</strong> The app connects only to servers you
-                configure (for example Sonarr, Radarr, SABnzbd, NZBGet, qBittorrent, Bazarr,
-                and Tautulli). No server data is sent to ArrStack.
-            </p>
+                <article class="card platform">
+                    <h2>iOS</h2>
+                    <p>
+                        On iOS, ArrStack stores your configuration on your device. If you enable iCloud sync, your
+                        configuration may sync through your personal iCloud account using Apple services such as
+                        CloudKit.
+                    </p>
+                    <p>
+                        Apple handles that synced data under Apple's own terms and privacy practices. If iCloud sync is
+                        disabled, your configuration remains local to your device unless you export it yourself.
+                    </p>
+                </article>
+            </div>
 
-            <p style="margin-top: 12px;">
-                <strong>Cloud Sync (iOS):</strong> If enabled on iOS, your server
-                configurations can sync through your personal iCloud account using Apple
-                CloudKit. This data is governed by Apple's privacy policy.
-            </p>
+            <article class="card">
+                <h2>Purchases</h2>
+                <p>
+                    Purchases and subscriptions are handled by Apple on iOS and by Google on Android. ArrStack does
+                    not receive your full payment card details or full payment credentials.
+                </p>
+            </article>
 
-            <p style="margin-top: 12px;">
-                <strong>Android Storage:</strong> On Android, configurations are stored on
-                your device unless you use your own OS/account backup features.
-            </p>
+            <article class="card">
+                <h2>Retention and Deletion</h2>
+                <p>
+                    ArrStack does not keep a server-side copy of your app data. Your data stays on your device, in
+                    your own Apple iCloud account if you enable iCloud sync on iOS, or in any manual backup files you
+                    create.
+                </p>
+                <p>You can reduce or remove stored data by:</p>
+                <ul>
+                    <li>Deleting servers or clearing app data on your device</li>
+                    <li>Uninstalling the app</li>
+                    <li>Deleting any manual backup files you exported</li>
+                    <li>Turning off iCloud sync on iOS and removing synced data using your Apple account tools</li>
+                </ul>
+            </article>
 
-            <p style="margin-top: 12px;">
-                <strong>Third-Party Services:</strong> ArrStack integrates with services you
-                operate on your own infrastructure. We are not responsible for their privacy
-                practices.
-            </p>
+            <article class="card">
+                <h2>Third-Party Services</h2>
+                <p>
+                    ArrStack connects to services that you operate or choose to use. Their privacy, security, and data
+                    handling practices are controlled by those services and their operators, not by ArrStack.
+                </p>
+            </article>
 
-            <p style="margin-top: 12px;">
-                <strong>Purchases:</strong> Billing is handled by Apple (App Store) on iOS
-                and Google (Google Play) on Android. We do not receive your full payment
-                information.
-            </p>
+            <article class="card">
+                <h2>Changes to This Policy</h2>
+                <p>
+                    This privacy policy may be updated from time to time. The latest version is indicated by the
+                    "Last Updated" date at the top of this page.
+                </p>
+            </article>
 
-            <p style="margin-top: 12px;">
-                <strong>Contact:</strong>
-                <a href="mailto:support@arrstack.org">support@arrstack.org</a>
-            </p>
-        </div>
+            <article class="card">
+                <h2>Contact</h2>
+                <p>
+                    If you have a privacy question, need support, or want to report an issue, contact
+                    <a href="mailto:support@arrstack.org">support@arrstack.org</a>.
+                </p>
+            </article>
+        </section>
 
-        <p class="footer">&copy; 2026 ArrStack</p>
-    </div>
+        <p class="footer">Copyright &copy; 2026 ArrStack</p>
+    </main>
 </body>
 </html>
